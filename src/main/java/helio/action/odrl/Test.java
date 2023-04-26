@@ -42,7 +42,6 @@ public class Test {
 			+ "          \"leftOperand\":  { \"@value\": \"POLYGON((-3.840070031583308 40.405675773960866,-3.839853107929229 40.40574011056009,-3.839842379093169 40.40571994155346,-3.839847072958945 40.40571840972993,-3.839840702712535 40.405706155140365,-3.840056620538234 40.40564947763477,-3.840070031583308 40.405675773960866))\", \"@type\": \"http://www.opengis.net/ont/geosparql#wktLiteral\" },\n"
 			+ "          \"operator\": \"geof:sfContains\" ,\n"
 			+ "          \"rightOperand\": { \"@value\": \"POINT((-3.839907742614103 40.40570902334372))\", \"@type\": \"http://www.opengis.net/ont/geosparql#wktLiteral\" }\n"
-			+ "\n"
 			+ "	   }\n"
 			+ " }]\n"
 			+ "}\n"
@@ -50,9 +49,10 @@ public class Test {
 
 	public static void main(String[] args) throws ActionException {
 		ODRL odrl = new ODRL();
+	
 		JsonObject conf = new JsonObject();
-		conf.addProperty("geof", "http://www.opengis.net/def/function/geosparql/");
-		odrl.configure(conf);
+		//conf.addProperty("geof", "http://www.opengis.net/def/function/geosparql/");
+		//odrl.configure(conf);
 		System.out.println(odrl.run(data2));
 	}
 }
